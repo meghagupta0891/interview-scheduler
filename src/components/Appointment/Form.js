@@ -6,7 +6,6 @@ export default function Form(props) {
   const [interviewer, setInterviewer] = useState(props.interviewer || null);
   const [name, setName] = useState(props.name || "");
   const [error, setError] = useState("");
-
   const reset = () => {
     setName("");
     setInterviewer(null);
@@ -18,6 +17,7 @@ export default function Form(props) {
   };
 
   const validate = () => {
+    debugger;
     if (name === "") {
       setError("Student name cannot be blank");
       return;
@@ -49,17 +49,16 @@ export default function Form(props) {
         <InterviewerList
           interviewers={props.interviewers}
           value={interviewer}
-          onChange={setInterviewer}
+          onChange={(val) => {
+            setInterviewer(val);
+          }}
+          interviewer= {interviewer}
         />
       </section>
       <section className="appointment__card-right">
         <section className="appointment__actions">
-          <Button danger onClick={cancel}>
-            Cancel
-          </Button>
-          <Button confirm onClick={validate}>
-            Save
-          </Button>
+          <Button onClick={cancel} danger>Cancel</Button>
+          <Button onClick={validate} confirm>Save</Button>
         </section>
       </section>
     </main>

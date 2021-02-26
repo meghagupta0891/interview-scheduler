@@ -2,7 +2,6 @@
   "name": "scheduler",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:8001",
   "dependencies": {
     "axios": "^0.21.1",
     "classnames": "^2.2.6",
@@ -17,7 +16,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public --ci",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "test:server": "NODE_ENV=test npm start",
+    "cypress": "cypress open -P ."
   },
   "browserslist": {
     "production": [
@@ -33,6 +34,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
+    "@cypress/react": "^4.16.4",
     "@storybook/addon-actions": "^5.0.10",
     "@storybook/addon-backgrounds": "^5.0.10",
     "@storybook/addon-links": "^5.0.10",
@@ -43,7 +45,9 @@
     "@testing-library/react-hooks": "^5.0.3",
     "@types/react": "^17.0.2",
     "babel-loader": "^8.0.5",
+    "cypress": "^6.5.0",
     "node-sass": "^4.14.0",
+    "prop-types": "^15.7.2",
     "react-test-renderer": "^16.14.0"
   },
   "jest": {
@@ -51,5 +55,17 @@
       "<rootDir>/node_modules/",
       "<rootDir>/.git/"
     ]
-  }
+  },
+  "description": "## Setup",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meghagupta0891/interview-scheduler.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meghagupta0891/interview-scheduler/issues"
+  },
+  "homepage": "https://github.com/meghagupta0891/interview-scheduler#readme"
 }
