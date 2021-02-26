@@ -24,3 +24,12 @@ npm run storybook
 
 
 ## Screenshots
+
+### View appointments
+!["View Appointments"](docs/list_appointments.png)
+
+### Add a new appointment using a student name and selection of interviewer
+!["Add Appointment"](docs/add-appointment.png)
+
+### Delete appointment
+!["Delete Appointment"](docs/delete-appointment.png)
